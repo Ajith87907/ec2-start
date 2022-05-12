@@ -14,12 +14,12 @@ pipeline {
 
 			if [ "$State" = "Start" ] 
 			then 
- 			aws ec2 start-instances --instance-ids $InstanceID 
+ 			aws ec2 start-instances --instance-ids $InstanceID --region us-east-1
   			echo Instance $InstanceID Started
  
 			elif [ "$State" = "Stop" ] 
 			then 
-  			aws ec2 stop-instances --instance-ids $InstanceID 
+  			aws ec2 stop-instances --instance-ids $InstanceID --region us-east-1
   			echo Instance $InstanceID Stopped 
 			fi 
 		"""
