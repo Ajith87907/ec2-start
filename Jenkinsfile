@@ -1,6 +1,5 @@
 pipelines {
   agent any
-    }
     
     stages {
 
@@ -23,7 +22,7 @@ pipelines {
 			fi 
 		"""
 
-	          }
-		}
-	     }
-           }
+	             }
+	       }
+	 }
+}
