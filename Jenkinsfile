@@ -9,7 +9,7 @@ pipelines {
 		
 	   steps {
 		
-		sh'''
+		sh"""
 
 			if [ "$State" = "Start" ] 
 			then 
@@ -21,7 +21,7 @@ pipelines {
   			aws ec2 stop-instances --instance-ids $InstanceID 
   			echo Instance $InstanceID Stopped 
 			fi 
-		'''
+		"""
 
 	          }
 		}
