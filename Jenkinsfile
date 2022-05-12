@@ -1,9 +1,11 @@
 pipelines {
   agent any
-
+parameters {
+        string(name: 'InstanceID', defaultValue: 'i-09d9a399dffe744c0', description: 'instanceid')
+	choice(name: 'State', choices: ['Start', 'Stop'], description: 'Pick something')
+    }
     
     stages {
-	    		properties([parameters([string(defaultValue: 'i-09d9a399dffe744c0', description: 'enter instance id', name: 'InstanceID'), choice(choices: ['Start', 'Stop'], description: 'state', name: 'State')])])
 
 	stage("stop/start_instance") {
 	
